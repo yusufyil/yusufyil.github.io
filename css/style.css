@@ -1,0 +1,39 @@
+body {
+    background-image: url(../asset/background.png);
+    height: 540px;
+    width: 960px;
+    background-color: #cccccc;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.center {
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+}
+
+.profile-photo{
+    background-color: black;
+}
+
+.full-name{
+    background-color: #089a96;
+    opacity: 80%;
+}
+
+.links{
+    background-color: #089a96;
+    opacity: 80%;
+}
+
+.bio{
+    background-color: #089a96;
+    opacity: 80%;
+}
+
+table, td {
+    border: 1px solid;
+    overflow-wrap: break-word;
+}

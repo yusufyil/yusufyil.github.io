@@ -1,21 +1,46 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Yusuf Yıldırım</title>
-        <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
-        <table class="center">
-            <tr>
-                <td>Satır 1 Sütun 1</td>
-                <td>Satır 1 Sütun 2</td>
-                <td>Satır 1 Sütun 3</td>
-            </tr>
-            <tr>
-                <td>Satır 2 Sütun 1</td>
-                <td>Satır 2 Sütun 2</td>
-                <td>Satır 2 Sütun 3</td>
-            </tr>
-        </table>
-    </body>
+<head>
+    <title>Yusuf Yıldırım</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<table class="center">
+    <tr class="profile-photo">
+        <td rowspan="5"><img src="asset/profile-photo.jpg" alt="Profile Photo" style="width: 360px"></td>
+    </tr>
+    <tr class="full-name">
+        <td>Yusuf Yıldırım</td>
+    </tr>
+    <tr class="links">
+        <td>
+            <a href="https://github.com/yusufyil/">
+                <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png"
+                     alt="Github Icon" width="30" height="30">
+            </a>
+            <a href="https://www.linkedin.com/in/yusufyildirim1/">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/LinkedIn_logo_initials.png/600px-LinkedIn_logo_initials.png"
+                     alt="LinkedIn Icon" width="30" height="30">
+            </a>
+            <a href="https://medium.com/@yusufyildirim1025">
+                <img src="https://cdn-icons-png.flaticon.com/512/5968/5968885.png"
+                     alt="Medium Icon" width="30" height="30">
+            </a>
+        </td>
+    </tr>
+    <tr class="bio">
+        <td width="400px">
+            <div>I am a 3rd-year computer engineering student at Marmara University. At the same time, I work part-time
+                as a back-end developer at SmartIQ. So far, I have developed rest APIs with spring boot. I used spring
+                security, Redis cache and apache Kafka, and I also wrote integration tests with cucumber and selenium. I
+                ran the tests I wrote on a remote server using docker.<br>
+                <a style="background-color:#1f51ce;" href="yusufyildirim1025@gmail.com/">Here is my mail address.</a>
+                <br>
+                <a style="background-color:#1f51ce;" href="https://github.com/yusufyil/">Here is my GitHub account.</a>
+            </div>
+        </td>
+    </tr>
+</table>
+</body>
 </html>
