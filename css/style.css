@@ -37,3 +37,19 @@ table, td {
     border: 1px solid;
     overflow-wrap: break-word;
 }
+
+.bio div > a {
+    /* button */
+    background-color: #089a96;
+    border: none;
+    color: white;
+    padding: 7px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 13px;
+    margin: 2px 1px;
+    cursor: pointer;
+    border-radius: 12px;
+    width: 150px;
+}
