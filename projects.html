@@ -11,6 +11,9 @@
     <link rel="stylesheet" href="css/projects.css">
 </head>
 <body>
+<div>
+    <button id="night-mode-toggle">Night Mode</button>
+</div>
 <div class="flex-container">
     <div class="card">
         <h2>Data Structures And Algorithms</h2>
@@ -35,5 +38,66 @@
         <a href="https://github.com/yusufyil/shopping-app-backend">View Project</a>
     </div>
 </div>
+<section id="feedback-section">
+    <h2>Feedback</h2>
+    <form id="feedback-form">
+        <div>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+        </div>
+        <div>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+        <div>
+            <label for="feedback-message">Feedback:</label>
+            <textarea id="feedback-message" name="feedback-message" rows="4" required></textarea>
+        </div>
+        <button type="submit">Submit</button>
+    </form>
+</section>
+<script>
+    const nightModeToggle = document.getElementById('night-mode-toggle');
+    const root = document.documentElement;
+
+    nightModeToggle.addEventListener('click', () => {
+        if (root.classList.contains('night-mode')) {
+            // Switch to day mode
+            root.classList.remove('night-mode');
+            nightModeToggle.textContent = 'Night Mode';
+        } else {
+            // Switch to night mode
+            root.classList.add('night-mode');
+            nightModeToggle.textContent = 'Day Mode';
+        }
+    });
+
+    // Set the initial mode based on the user's preference (if available)
+    const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
+    if (prefersDarkScheme.matches) {
+        root.classList.add('night-mode');
+        nightModeToggle.textContent = 'Day Mode';
+    }
+</script>
+<script>
+    const feedbackForm = document.querySelector('#feedback-form');
+
+    feedbackForm.addEventListener('submit', (event) => {
+        event.preventDefault();
+
+        const name = feedbackForm.elements['name'].value;
+        const email = feedbackForm.elements['email'].value;
+        const feedback = feedbackForm.elements['feedback-message'].value;
+
+        const body = `Name: ${name}\nEmail: ${email}\nFeedback: ${feedback}`;
+
+        const link = `mailto:yusufyildirim1025@gmail.com?subject=Feedback&body=${encodeURIComponent(body)}`;
+
+        window.location.href = link;
+
+        feedbackForm.reset();
+    });
+
+</script>
 </body>
 </html>
