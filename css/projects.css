@@ -1,3 +1,5 @@
+@import url(http://fonts.googleapis.com/css?family=Lato:300,400,700);
+
 * {
     box-sizing: border-box;
 }
@@ -172,4 +174,90 @@ body {
 
 #feedback-form button[type="submit"]:hover {
     background-color: #3e8e41;
+}
+
+body {
+    font-family: 'Lato', Calibri, Arial, sans-serif;
+    color: #89867e;
+    background: #f9f9f9;
+}
+
+*, *:after, *:before { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+
+a {
+    text-decoration: none;
+    outline: none;
+}
+
+a img {
+    border: none;
+}
+
+.caption {
+    -webkit-backface-visibility: hidden; /* prevent flash when embedding fiddle */
+    display: inline-block;
+    position: relative;
+    margin: 10px;
+    overflow: hidden;
+    background: rgba(0,0,0,0.2);
+    -webkit-transition: background 0.3s ease-in-out;
+    -moz-transition: background 0.3s ease-in-out;
+    transition: background 0.3s ease-in-out;
+}
+
+.caption:hover {
+    background: rgba(0,0,0,0);
+}
+
+.caption img {
+    display: block;
+    max-width: 100%;
+    -webkit-transition: -webkit-transform 0.3s ease-in-out;
+    -moz-transition: -moz-transform 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out;
+}
+
+.caption:hover img {
+    -webkit-transform: translateX(100%);
+    -moz-transform: translateX(100%);
+    transform: translateX(100%);
+}
+
+.caption::before,
+.caption::after {
+    position: absolute;
+    width: 100%;
+    z-index: -1;
+    background: #cecece;
+    -webkit-transform: translateX(-30%);
+    -moz-transform: translateX(-30%);
+    transform: translateX(-30%);
+    -webkit-transition: -webkit-transform 0.3s ease-in-out;
+    -moz-transition: -moz-transform 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out;
+}
+
+.caption::before {
+    content: attr(data-title);
+    height: 30%;
+    color: #05b19a;
+    font-size: 40px;
+    font-weight: 300;
+    padding: 30px;
+}
+
+.caption::after {
+    content: '\201C' attr(data-description) '\201D';
+    top: 30%;
+    height: 70%;
+    color: #fff;
+    font-size: 14px;
+    padding: 20px 30px;
+}
+
+.caption:hover::before,
+.caption:hover::after  {
+    -webkit-transform: translateX(0%);
+    -moz-transform: translateX(0%);
+    transform: translateX(0%);
 }
