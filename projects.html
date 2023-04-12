@@ -15,28 +15,26 @@
     <button id="night-mode-toggle">Night Mode</button>
 </div>
 <div class="flex-container">
-    <div class="card">
-        <h2>Data Structures And Algorithms</h2>
-        <p>This is one of the best projects in my github account.
+    <a class="caption" href="https://github.com/yusufyil/Data-Structures-And-Algorithms-With-JavaFX"
+       data-title="DSA"
+       data-description="This is one of the best projects in my github account.
             I developed this project in order to visualize and simplfy
-            basics of the 5 widely used data structures.
-        </p>
-        <a href="https://github.com/yusufyil/Data-Structures-And-Algorithms-With-JavaFX">View Project</a>
-    </div>
-    <div class="card">
-        <h2>Mailbox Backend With Spring Boot</h2>
-        <p>I developed a backend api to implement basic operations in mail services
-            including sending and receiving mails, creating and deleting users, admin and other user roles.
-        </p>
-        <a href="https://github.com/yusufyil/Spring-Boot-Fake-Mail-Project">View Project</a>
-    </div>
-    <div class="card">
-        <h2>Shopping App</h2>
-        <p>In this project I've worked with an android developer and developed a complete example of modern, nice
+            basics of the 5 widely used data structures.">
+        <img src="http://tympanus.net/Tutorials/PseudoElementsImageCaptions/images/4.jpg" alt="Illustration of Viking"/>
+    </a>
+    <a class="caption" href="https://github.com/yusufyil/Spring-Boot-Fake-Mail-Project"
+       data-title="Mailbox"
+       data-description="I developed a backend api to implement basic operations in mail services
+            including sending and receiving mails, creating and deleting users, admin and other user roles..">
+        <img src="http://tympanus.net/Tutorials/PseudoElementsImageCaptions/images/4.jpg" alt="Illustration of Viking"/>
+    </a>
+    <a class="caption" href="https://github.com/yusufyil/shopping-app-backend"
+       data-title="Shopping App"
+       data-description="In this project I've worked with an android developer and developed a complete example of modern, nice
             looking e-commerce app. Backend side has elastic search so that we can provide better user experience when
-            searching for products.</p>
-        <a href="https://github.com/yusufyil/shopping-app-backend">View Project</a>
-    </div>
+            searching for products.">
+        <img src="http://tympanus.net/Tutorials/PseudoElementsImageCaptions/images/4.jpg" alt="Illustration of Viking"/>
+    </a>
 </div>
 <section id="feedback-section">
     <h2>Feedback</h2>
@@ -73,7 +71,7 @@
     });
 
     // Set the initial mode based on the user's preference (if available)
-    const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
+    const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: light)");
     if (prefersDarkScheme.matches) {
         root.classList.add('night-mode');
         nightModeToggle.textContent = 'Day Mode';
